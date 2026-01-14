@@ -5,13 +5,26 @@ body{
     background-color: #f2f2f2;
 }
 
-header {
-    display: flex;
+.main-header {
+    color: white;       /* Cor do texto branco */
+    display: flex;       /* Ativa o modo de colunas */
+    align-items: center; /* Alinha a foto e o nome verticalmente no centro */
+    gap: 20px;           /* Cria um espaço entre a foto e o texto */
+    padding: 20px;
     background-color: #333;
-    color: white;       
-    padding: 10px;
-    text-align: center;
-    align-items: center;
+}
+
+
+.profile-pic {
+    width: 100px;        /* Define o tamanho da imagem */
+    height: 100px;
+    border-radius: 50%;  /* Deixa a foto redonda, se desejar */
+    object-fit: cover;   /* Garante que a foto não fique esticada */
+}
+
+.header-info h1 {
+  margin: 0;           /* Remove margens padrão para alinhar melhor */
+  font-size: 1.5rem;
 }
 
 section {
