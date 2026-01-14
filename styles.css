@@ -6,10 +6,12 @@ body{
 }
 
 header {
+    display: flex;
     background-color: #333;
     color: white;       
-    padding: 20px;
+    padding: 10px;
     text-align: center;
+    align-items: center;
 }
 
 section {
@@ -18,9 +20,9 @@ section {
 
 img {
     max-width: 200px;
+    margin-left: 20px;
     border-radius: 100px;
     display: block;
-    margin: 20px auto;
 }
 
 a {
@@ -36,4 +38,37 @@ footer {
     text-align: center;
     padding: 10px;
     margin-top: 20px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    img {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
 }
