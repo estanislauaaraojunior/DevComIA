@@ -1,0 +1,92 @@
+body {
+    background-color: #6b6969;
+    /* Cor de fundo da página */
+    font-family: Arial, sans-serif;
+    /* Fonte padrão */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quadradoCentralizado {
+    width: 500px;
+    /* Largura do quadrado */
+    height: 650px;
+    /* Altura do quadrado */
+    background-color: black;
+    /* Cor de fundo preta */
+    margin: 0 auto;
+    /* Centraliza horizontalmente */
+    padding: 20px;
+    /* Espaçamento interno */
+    box-sizing: border-box;
+    /* Inclui padding na largura e altura */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+}
+
+.informacoes {
+    max-width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+}
+
+.texto {
+    font-size: 18px;
+    color: white;
+    justify-items: justify;
+}
+
+label {
+    font-size: 20px;
+    color: white;
+}
+
+.texto-input {
+    width: 450px;
+    /* Largura total do contêiner pai */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+    font-size: 20px;
+    display: flex;
+}
+
+.analisar {
+    display: flex;
+    /* Define um contêiner flexível */
+    padding: 5px;
+    /* Espaçamento interno */
+    justify-content: center;
+    /* Centraliza o conteúdo */
+}
+
+.button-analisar {
+    font-size: 20px;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.titulo-resultado {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+}
+
+.resultado {
+    background-color: #6b6969;
+    border-radius: 10px;
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
