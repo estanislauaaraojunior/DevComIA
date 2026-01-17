@@ -1,0 +1,67 @@
+<!-- Uma página com:
+
+três campos de entrada (nome, idade, hobbies)
+
+um botão “Analisar”
+
+uma área onde o resultado aparece
+
+toda a lógica em JavaScript, reaproveitando suas funções -->
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Analisador de perfil</h1>
+    <label>Nome:</label>
+    <input type="text" id="nomeInput" /><br/><br/>
+
+    <label>Idade:</label>
+    <input type="number" id="idadeInput" /><br/><br/>
+
+    <label>Hobbies:</label>
+    <input type="text" id="hobbieInput" /> <br/><br/>
+
+    <button onclick="analisar()">Analisar</button>
+
+    <h2>Resultado:</h2>
+    <p id="resultado"></p>
+    
+
+    <script> 
+     
+        function analisarIdade (idade) {
+            if (idade < 18) {
+                return "É menor de idade";
+            } 
+            else if (idade >= 18 && idade <= 25) {
+                    return "Você está vivendo a vida"
+                }
+            else if (idade > 25 && idade <= 45) {
+                return "Você está na melhor fase da vida";            
+            }
+            else {
+                return "Você está na fase de sabedoria";
+            }
+        }
+
+        function descrevePessoa (nome, idade, hobbies) {
+            const descricaoIdade = analisarIdade(idade);
+            return (nome + " tem " + idade + " anos. " + descricaoIdade + " e gosta de " + hobbies.join(", ") + ".");
+        }
+
+        function analisar() {
+            const nome = document.getElementById("nomeInput").value;
+            const idade = Number(document.getElementById("idadeInput").value);
+            const hobbies = document.getElementById("hobbieInput").value.split(",");
+            const texto = descrevePessoa(nome, idade, hobbies);       
+            document.getElementById("resultado").textContent = texto;  
+        }
+    </script>
+</body>
+</html>

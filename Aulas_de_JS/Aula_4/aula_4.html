@@ -1,0 +1,49 @@
+<!-- A ideia é criar um pequeno “sistema” que:
+
+recebe nome, idade e hobbies
+
+analisa a idade usando uma função
+
+monta uma descrição completa da pessoa
+
+imprime tudo no console -->
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+        const nome = "Estanislau";
+        let idade = 42;
+        let hobbies = ["Estudar", "Viajar", "Praia"];
+
+        function analisarIdade (idade) {
+            if (idade < 18) {
+                return "É menor de idade";
+            } 
+            else if (idade >= 18 && idade <= 25) {
+                    return "Você está vivendo a vida"
+                }
+            else if (idade > 25 && idade <= 45) {
+                return "Você está na melhor fase da vida";            
+            }
+            else {
+                return "Você está na fase de sabedoria";
+            }
+        }
+
+        function descrevePessoa (nome, idade, hobbies) {
+            const descricaoIdade = analisarIdade(idade);
+            return (nome + " tem " + idade + " anos. " + descricaoIdade + " e gosta de " + hobbies.join(", ") + ".");
+        }
+       
+        console.log(descrevePessoa(nome, idade, hobbies));
+        
+    </script>
+</body>
+</html>
