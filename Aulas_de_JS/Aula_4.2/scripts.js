@@ -1,12 +1,31 @@
-
+let imc = 0;
 
 function calcularIMC() {
-    const peso = Number(document.getElementById("pesoInput").value);
-    const altura = Number(document.getElementById("alturaInput").value);
-    const resultado = peso / (altura * altura);
-
- document.getElementById("resultado").textContent = "Seu indice de massa corporal é: " + resultado.toFixed(2);
+    let peso = Number(document.getElementById("pesoInput").value);
+    let altura = Number(document.getElementById("alturaInput").value);
+    imc = peso / (altura * altura);
+    document.getElementById("imc").textContent = "Seu indice de massa corporal é: " + imc.toFixed(2);
 }
 
-console.log("Script carregado com sucesso!");
-console.log(calcularIMC());
+function classificarIMC() {
+    if (imc <= 18.5)
+        document.getElementById("classificacao").textContent = "Está classificado como Magreza"
+
+    else if (imc > 18.5 && imc <= 24.9)
+        document.getElementById("classificacao").textContent = "Está classificado como Normal"
+
+    else if (imc >= 25 && imc <= 29.9)
+        document.getElementById("classificacao").textContent = "Está classificado como Sobrepeso"
+
+    else
+        document.getElementById("classificacao").textContent = "Está classificado como Obesidade";
+
+}
+
+
+
+
+
+
+
+
