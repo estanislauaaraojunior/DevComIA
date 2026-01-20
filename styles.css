@@ -32,21 +32,21 @@ section {
 }
 
 img {
-    max-width: 200px;
-    margin-left: 20px;
-    border-radius: 100px;
-    display: block;
+    max-width: 200px;       /* Define a largura máxima da imagem */
+    margin-left: 20px;      /* Define a margem esquerda da imagem */
+    border-radius: 100px;       /* Deixa a imagem redonda */
+    display: block;      /* Garante que a imagem seja tratada como um bloco */
 }
 
 a {
-    display: inline-block;
-    margin-top: 10px;
-    color: #0077cc;
-    text-decoration: none;
+    display: inline-block;      /* Garante que o link seja tratado como um bloco inline */
+    margin-top: 10px;       /* Adiciona uma margem superior */
+    color: #0077cc;         /* Cor do link */
+    text-decoration: none;   /* Remove o sublinhado do link */
 }
 
 footer {
-    background-color: #333;
+    background-color: #333;     
     color: white;
     text-align: center;
     padding: 10px;

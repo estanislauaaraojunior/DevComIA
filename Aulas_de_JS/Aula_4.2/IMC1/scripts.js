@@ -1,10 +1,10 @@
-let imc = 0;
+
 
 function calcularIMC() {
     let peso = Number(document.getElementById("pesoInput").value);
     let altura = Number(document.getElementById("alturaInput").value);
     imc = peso / (altura * altura);
-    document.getElementById("imc").textContent = "Seu indice de massa corporal é: " + imc.toFixed(2);
+    document.getElementById("resultadoIMC").textContent = "Seu indice de massa corporal é: " + imc.toFixed(2);
 }
 
 function classificarIMC() {
@@ -19,7 +19,7 @@ function classificarIMC() {
 
     else
         document.getElementById("classificacao").textContent = "Está classificado como Obesidade";
-
+    console
 }
 
 
